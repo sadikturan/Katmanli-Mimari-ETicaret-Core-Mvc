@@ -8,6 +8,7 @@ Kursun başlıca amacı sıfırdan her süreci kendinizin yönetebileceği bir p
 Kursumuzun Öne Çıkan Kazanımları;
 
 ** Visual Studio Code ile Proje Geliştirme
+
 ** Visual Studio 2019 ile Proje Geliştirme
 ** Sıfırdan Asp.Net Core Mvc ile Proje Geliştirme
 ** Repository Pattern Kullanımı
