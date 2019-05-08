@@ -2,7 +2,7 @@
 
 Artık Kendi **E-Ticaret** sitenizi **Asp net Core Mvc** kullanarak üstelik **katmanlı mimari bakış açısıyla** en baştan adım adım geliştirebilirsiniz. 
 
-Kursumuz sıfırdan başlayarak projeyi adım adım anlatmaktadır. Her hangi bir **hazır e-ticaret uygulaması kullanılmamıştır. **
+Kursumuz sıfırdan başlayarak projeyi adım adım anlatmaktadır. Her hangi bir **hazır e-ticaret uygulaması kullanılmamıştır.**
 
 Kursun başlıca amacı sıfırdan her süreci kendinizin yönetebileceği bir proje yapısı oluşturmaktır. 
 
