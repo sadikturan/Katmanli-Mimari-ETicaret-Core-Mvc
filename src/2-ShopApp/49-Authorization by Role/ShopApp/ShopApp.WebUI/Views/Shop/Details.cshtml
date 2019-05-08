@@ -1,0 +1,34 @@
+﻿@model ProductDetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <img src="~/img/@Model.Product.ImageUrl" alt="@Model.Product.Name" class="img-fluid" />
+    </div>
+    <div class="col-md-9">
+        <h1 class="mb-3">
+            @Model.Product.Name
+        </h1>
+        <hr />
+        @foreach (var category in Model.Categories)
+        {
+            <a href="#" class="btn btn-link p-0 mb-3">@category.Name</a>
+        }
+        <div class="mb-3">
+            <h4 class="text-primary mb-3">
+                @Model.Product.Price TL
+            </h4>
+            <button type="submit" class="btn btn-primary btn-lg">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <p class="p-3">
+            @Html.Raw(Model.Product.Description)
+        </p>
+    </div>
+</div>

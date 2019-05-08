@@ -1,0 +1,95 @@
+﻿@model ProductModel
+@{
+    ViewData["Title"] = "EditProduct";
+    var counter = 0;
+}
+
+@section Scripts {
+    <script src="~/modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/modules/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace("editor");
+    </script>
+}
+
+
+<h1>Edit Product</h1>
+<hr />
+
+<form asp-controller="Admin" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-8">
+
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <div class="form-group row">
+                <label asp-for="Name" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Name" value="@Model.Name" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="ImageUrl" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input type="hidden" name="ImageUrl" value="@Model.ImageUrl" />
+                    <img src="~/img/@Model.ImageUrl" width="80" />
+                    <input type="file" name="file" value="" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Description" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <textarea id="editor" asp-for="Description" class="form-control">
+                        @Model.Description
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Price" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Price" value="@Model.Price" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-10 offset-md-2">
+                    <button type="submit" class="btn btn-primary">Save Product</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            @foreach (var item in (List<Category>)ViewBag.Categories)
+            {
+                var isChecked = "";
+                if (Model.SelectedCategories.Any(i => i.Id == item.Id))
+                {
+                    isChecked = "checked";
+
+                    <input type="hidden" name="SelectedCategories[@counter].Id" value="@item.Id" />
+                    <input type="hidden" name="SelectedCategories[@counter].Name" value="@item.Name" />
+
+                    counter++;
+
+                }
+                else
+                {
+                    isChecked = "";
+                }
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox"
+                           name="categoryIds"
+                           value="@item.Id"
+                           class="custom-control-input"
+                           id="category@(item.Id)"
+                           @isChecked>
+                    <label class="custom-control-label" for="category@(item.Id)">@item.Name</label>
+                </div>
+            }
+        </div>
+    </div>
+
+</form>
+
+

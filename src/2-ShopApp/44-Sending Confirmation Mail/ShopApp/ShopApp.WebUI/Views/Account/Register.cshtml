@@ -1,0 +1,73 @@
+﻿@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@section Scripts {
+    <script src="~/modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<h1>Register User</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-8">
+
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="text-danger">@ViewBag.ErrorMessage</div>
+        }
+
+    <form asp-controller="Account" asp-action="Register" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <label asp-for="FullName" class="col-md-2 col-form-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FullName" value="@Model.FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Username" class="col-md-2 col-form-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Username" value="@Model.Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Email" class="col-md-2 col-form-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" value="@Model.Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Password" class="col-md-2 col-form-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" value="@Model.Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="RePassword" class="col-md-2 col-form-label"></label>
+            <div class="col-md-10">
+                <input asp-for="RePassword" value="@Model.RePassword" class="form-control" />
+                <span asp-validation-for="RePassword" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-10 offset-md-2">
+                <button type="submit" class="btn btn-primary">Create User</button>
+            </div>
+        </div>
+
+    </form>
+
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+﻿@model ShopApp.WebUI.Models.ProductListModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="/modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @foreach(var item in Model.Products)
+    {
+        <p>@item.Name</p>
+    }
+</body>
+</html>

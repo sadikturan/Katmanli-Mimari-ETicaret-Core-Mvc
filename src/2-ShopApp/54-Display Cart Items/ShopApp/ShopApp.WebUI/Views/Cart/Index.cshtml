@@ -1,0 +1,45 @@
+﻿@model CartModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Shopping Cart</h1>
+
+<div class="row mt-5">
+    <div class="col-md-8">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CartItems)
+                {
+                <tr>
+                    <td>
+                        <img src="~/img/@item.ImageUrl" width="80" />
+                    </td>
+                    <td>@item.Name</td>
+                    <td>@item.Price.ToString("c")</td>
+                    <td>@item.Quantity</td>
+                    <td>@((item.Quantity*item.Price).ToString("c"))</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="fa fa-times fa-fw"></i>
+                        </button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        
+        </table>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
