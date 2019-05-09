@@ -34,4 +34,6 @@ Kursumuzun Öne Çıkan Kazanımları;
 
 ve daha bir çok konu başlığıyla baştan sona mimari bakış açısıyla **kendi e-ticaret projeni geliştirmek için hemen kursa katılın.**
 
+**Public Version** klasörü altındaki proje için Pull Request gönderebilirsiniz.
+
 Kursa indirimli katılmak için [tıklayınız.](https://www.udemy.com/aspnet-core-mvc-kursu/?couponCode=GITHUB27 "tıklayınız.")
