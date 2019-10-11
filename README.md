@@ -1,5 +1,7 @@
 # Katmanlı Mimari ile E-Ticaret Kursu: Core Mvc
 
+Katmanlı Mimari ile E-Ticaret Kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/aspnet-core-mvc-kursu/?referralCode=DCACE3376E0811F5BDA9 "tıklayınız.")
+
 Artık Kendi **E-Ticaret** sitenizi **Asp net Core Mvc** kullanarak üstelik **katmanlı mimari bakış açısıyla** en baştan adım adım geliştirebilirsiniz. 
 
 Kursumuz sıfırdan başlayarak projeyi adım adım anlatmaktadır. Her hangi bir **hazır e-ticaret uygulaması kullanılmamıştır.**
@@ -36,4 +38,4 @@ ve daha bir çok konu başlığıyla baştan sona mimari bakış açısıyla **k
 
 **Public Version** klasörü altındaki proje için Pull Request gönderebilirsiniz.
 
-Kursa indirimli katılmak için [tıklayınız.](https://www.udemy.com/aspnet-core-mvc-kursu/?couponCode=GITHUB27 "tıklayınız.")
+Kursa indirimli katılmak için [tıklayınız.](https://www.udemy.com/course/aspnet-core-mvc-kursu/?referralCode=DCACE3376E0811F5BDA9 "tıklayınız.")
